@@ -7,3 +7,4 @@ git pull
 cp gvimrc ~/.gvimrc
 cp vimrc ~/.vimrc
 
+vim +PluginInstall +qa

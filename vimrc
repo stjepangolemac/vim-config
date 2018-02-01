@@ -1,6 +1,10 @@
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set laststatus=2
+set updatetime=250
+set noshowmode
+syntax on
 
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
@@ -21,6 +25,10 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,6 +38,9 @@ filetype plugin indent on
 let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+let g:ale_sign_error = '●' 
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0
 " ALE configuration end
 
 " Javascript configuration
@@ -47,6 +58,11 @@ let g:NERDTreeDirArrowCollapsible = '⇲'
 let g:ctrlp_map = '<c-s>'
 let g:ctrlp_custom_ignore = 'node_modules\|git\|DS_Store'
 " CtrlP configuration
+
+" Indent guides configuration
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+" Indent guides configuration
 
 " Remaps
 noremap % v%
