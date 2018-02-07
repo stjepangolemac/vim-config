@@ -4,6 +4,8 @@ set softtabstop=2
 set laststatus=2
 set updatetime=250
 set noshowmode
+set ignorecase
+set smartcase
 syntax on
 
 let &colorcolumn=join(range(81,999),",")
@@ -66,7 +68,7 @@ let g:indent_guides_guide_size = 1
 
 " Remaps
 noremap % v%
-imap jj <Esc>
+inoremap jj <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <S-f> :ALEFix<CR>
 " Remaps end
