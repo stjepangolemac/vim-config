@@ -34,6 +34,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'
 Plugin 'morhetz/gruvbox'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
