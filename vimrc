@@ -24,6 +24,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'ianks/vim-tsx'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/ctrlp.vim'
@@ -31,13 +33,14 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
 " Vundle plugins end
 
 " ALE configuration
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['tslint'] }
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 let g:ale_sign_error = '●' 
@@ -57,7 +60,7 @@ let g:NERDTreeDirArrowCollapsible = '⇲'
 " NerdTree configuration end
 
 " CtrlP configuration
-let g:ctrlp_map = '<c-s>'
+let g:ctrlp_map = '<C-s>'
 let g:ctrlp_custom_ignore = 'node_modules\|git\|DS_Store'
 " CtrlP configuration
 
@@ -66,8 +69,15 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 " Indent guides configuration
 
+" Theme configuration
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_improved_strings = '1'
+let g:gruvbox_improved_warnings = '1'
+" Theme configuration
+
 " Remaps
 noremap % v%
+noremap [[ :ALEGoToDefinition<CR>
 inoremap jj <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <S-f> :ALEFix<CR>
