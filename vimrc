@@ -29,16 +29,20 @@ Plugin 'ianks/vim-tsx'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'
 Plugin 'morhetz/gruvbox'
 Plugin 'fatih/vim-go'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call vundle#end()
 filetype plugin indent on
 " Vundle plugins end
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+" Powerline
 
 " ALE configuration
 let g:ale_fixers = { 'javascript': ['eslint'], 'typescript': ['tslint'] }
