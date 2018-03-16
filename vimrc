@@ -84,7 +84,7 @@ let g:gruvbox_improved_warnings = '1'
 noremap % v%
 noremap [[ :ALEGoToDefinition<CR>
 inoremap jj <Esc>
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle %<CR>
 map <S-f> :ALEFix<CR>
 " Remaps end
 
