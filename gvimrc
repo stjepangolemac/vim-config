@@ -1,8 +1,8 @@
-set background=dark
 syntax on
+set background=dark
 colorscheme gruvbox
 set guioptions=
-set guifont=Meslo\ LG\ S\ for\ Powerline:h14
+set guifont=Fira\ Code:h14
 
 let &colorcolumn=join(range(81,999),",")
 " highlight ColorColumn ctermbg=235 guibg=#2c2d27
