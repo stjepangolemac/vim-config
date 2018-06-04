@@ -35,6 +35,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'morhetz/gruvbox'
 Plugin 'fatih/vim-go'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Galooshi/vim-import-js'
 
 call vundle#end()
 filetype plugin indent on
